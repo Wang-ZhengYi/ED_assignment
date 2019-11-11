@@ -2,4 +2,4 @@ This is a code assignment for Electric Dynamics Chapter5 2019,BNU. Please refer 
 
 Created by Z.Y.Wang @ BNU
 
-run ED_Chapter5.py to creat a elctric field intensity map of a electric dipole radiation
+run ED_Chapter5.py to create a electric field intensity map of a electric dipole radiation
