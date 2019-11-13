@@ -2,4 +2,10 @@ This is a code assignment for Electric Dynamics Chapter5 2019,BNU. Please refer 
 
 Created by Z.Y.Wang @ BNU
 
-run ED_Chapter5.py to create a electric field intensity map of a electric dipole radiation
+	1.run ED_Chapter5.py to creat a elctric field intensity map of a electric dipole radiation
+
+	2.run ED_Chapter5_plus.py, which produces a series of full field electric field intensity  distribution of a electric dipole radiation maps.
+
+	3.run video_maker.py , which produce a video consists of full field electric field intensity distribution maps of a dipole radiation produced by ED_Chapter5_plus.py.
+
+	4.run video_editor.py, which can edit the video, like adding calling card and BGM, etc..

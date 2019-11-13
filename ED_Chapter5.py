@@ -33,10 +33,11 @@ N = np.logspace(-0.9,-0.3,3)#contours label numbers
 for i in range(pixels):
 	for j in range(pixels):
 		R[i,j] = np.sqrt((i-pixels/2)**2+(j-pixels/2)**2)
-		E[i,j] = P_tt*(np.cos(k*R[i,j])+1.0j*np.sin(k*R[i,j]))*(j-pixels/2)/R[i,j]**2/4/pi
+		E[i,j] = P_tt*(np.cos(k*R[i,j]))*(j-pixels/2)/R[i,j]**2/4/pi/c**3
 
 
 ##------------data writting & figures making-----------------##
+
 fig= plt.figure()
 ax1 = fig.add_subplot(121)
 ax2 = fig.add_subplot(122)
@@ -56,5 +57,5 @@ ax1.axis('off')
 ax1.set_title('E field of a dipole radiation', fontproperties=prop,fontsize=17)
 
 plt.show()
-plt.savefig('dipole_radiation.png')
+plt.savefig('dipole_radiation.png',dpi=300)
 exit()
