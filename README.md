@@ -9,3 +9,5 @@
 3. run [video_maker.py](video_maker.py), which produce a video consists of full field electric field intensity distribution maps of a dipole radiation produced by ED_Chapter5_plus.py.
 
 4. run [video_editor.py](video_editor.py), which can edit the video, like adding calling card and BGM, etc..
+5. [video of dipole radiation](videos/finalVideo.mp4)
+<iframe height=480 width=640 src="https://github.com/Wang-ZhengYi/ED_Chapter5_code/blob/master/videos/finalVideo.mp4" frameborder=0 allowfullscreen></iframe>
