@@ -14,4 +14,4 @@ electric dipole radiation:
 
 ![avatar](dipole_radiation.png)
 
-###Please refer to "Electrodynamics"Page.163-165 by China Higher Education Press for detailed answers.
+### Please refer to "Electrodynamics"Page.163-165 by China Higher Education Press for detailed answers.
