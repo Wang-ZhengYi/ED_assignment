@@ -25,11 +25,9 @@ for f in delList:
     	shutil.rmtree(filePath,True)
 
 
-
-
-
-
 ##------------parameters settings-----------------##
+E_file = './E_map.dat'
+E_0 = np.loadtxt(E_file)
 
 c = 1#speed of light
 eps = 1#vaccum dielectirc number
@@ -37,24 +35,25 @@ pi = np.pi
 l = 300#wave length
 k= 2*pi/l#wave number
 P_tt = 1000#acceleration of electic dipole
-pixels = 1024#resolution of the map
-total_T = 600
+pixels = E_0.shape[0]#resolution of the map
+perc_2 = 4*pi*eps*c**3
+total_T = 3
 omega = 0.05
+
 ##------------matrix settings-----------------##
 
 E = np.zeros(shape=(pixels,pixels,total_T),dtype='float')# electric field intensity
 B = np.zeros(shape=(pixels,pixels,total_T),dtype='float')# magnetic field intensity
 R = np.zeros(shape=(pixels,pixels),dtype='float')#radius or the distance from the map centre
 N = np.logspace(-0.9,-0.3,3)#contours label numbers
+L = np.zeros(pixels,dtype='float')#any axes of x or y
 phi = np.zeros(total_T,dtype='float')
-##---------------computing--------------------##
-for i in range(pixels):
-	for j in range(pixels):
-		R[i,j] = np.sqrt((i-pixels/2)**2+(j-pixels/2)**2)
-		for m in range(total_T):
-			phi[m] = omega*m
-			E[i,j,m] = P_tt*(np.cos(k*R[i,j] - phi[m]))*(j-pixels/2)/R[i,j]**2/4/pi/c**3
 
+
+##---------------computing--------------------##
+for m in range(total_T):
+	phi[m] = -1*omega*m
+	E[:,:,m] = (E_0[:,:]*exp(phi[m])).real
 
 ##------------data writting & figures making-----------------##
 
