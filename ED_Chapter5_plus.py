@@ -53,7 +53,7 @@ phi = np.zeros(total_T,dtype='float')
 ##---------------computing--------------------##
 for m in range(total_T):
 	phi[m] = -1*omega*m
-	E[:,:,m] = (E_0[:,:]*exp(phi[m])).real
+	E[:,:,m] = (E_0[:,:]*np.exp(phi[m])).real
 
 ##------------data writting & figures making-----------------##
 
