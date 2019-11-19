@@ -1,4 +1,4 @@
-## This is a code assignment for Electric Dynamics Chapter5 2019,BNU. Please refer to "Electrodynamics"Page.163-165 by China Higher Education Press for detailed answers.
+## This is a code assignment for Electric Dynamics Chapter5 2019,BNU. 
 
 ### Created by Z.Y.Wang @ BNU [browse github for codes details](https://github.com/Wang-ZhengYi/ED_Chapter5_code)
 
@@ -13,3 +13,5 @@
 electric dipole radiation:
 
 ![avatar](dipole_radiation.png)
+
+###Please refer to "Electrodynamics"Page.163-165 by China Higher Education Press for detailed answers.
