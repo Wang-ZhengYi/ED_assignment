@@ -1,6 +1,8 @@
-## This is a code assignment for Electric Dynamics Chapter5 2019,BNU. 
+# This is a code assignment for Electric Dynamics Chapter5 2019,BNU. 
 
-### Created by Z.Y.Wang @ BNU [browse github for codes details](https://github.com/Wang-ZhengYi/ED_Chapter5_code)
+## A series of electrimagnetic field intensity simulations of electric dipole, electric quadrupole and magnetic dipole radiation, and the energy flux density simulation of atenna and atenna array.
+
+### Created by Z.Y.Wang @ BNU [codes details](https://github.com/Wang-ZhengYi/ED_Chapter5_code)
 
 1. run [ED_Chapter5.py](ED_Chapter5.py) to creat a elctric field intensity map of a electric dipole radiation
 
@@ -10,7 +12,7 @@
 
 4. run [video_editor.py](video_editor.py), which can edit the video, like adding calling card and BGM, etc..
 
-electric dipole radiation:
+### electric dipole radiation:
 
 ![avatar](dipole_radiation.png)
 
