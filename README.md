@@ -16,7 +16,7 @@
 
 ![avatar](dipole_radiation.png)
 
-### sketch video：
+### electric dipole radiation sketch video：
 
 ![image](E_field.gif)
 
