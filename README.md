@@ -1,4 +1,4 @@
-# A series of electrimagnetic field intensity simulations of electric dipole, electric quadrupole and magnetic dipole radiation, and the energy flux density simulation of atenna and atenna array.
+# A series of electrimagnetic field intensity simulations of electric dipole, electric quadrupole and magnetic dipole radiation, and the energy flux density simulation of atenna and atenna arrays.
 
 ## This is a code assignment for Electric Dynamics Chapter5 2019,BNU. 
 
