@@ -3,7 +3,7 @@
 '''
     Created on Sept 2019
 
-    Elecetric Dynmatic Chapter 2
+    Elecetric Dynmatic Chapter 5
     
     @author: Z.Y.Wang @ BNU
     '''
