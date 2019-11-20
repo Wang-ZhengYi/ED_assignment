@@ -13,4 +13,4 @@ final_path = './videos/finalVideo.mp4'
 
 clip = (VideoFileClip(final_path).subclip(0,6.28).resize(0.2))
 
-clip.write_gif("E_field.gif") 
+clip.write_gif("dipole_E_field.gif") 
