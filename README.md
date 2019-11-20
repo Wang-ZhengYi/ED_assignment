@@ -18,4 +18,8 @@
 
 ![avatar](dipole_radiation.png)
 
+### electric dipole radiation sketch video：
+
+![image](E_field.gif)
+
 ### Please refer to "Electrodynamics"Page.163-165 by China Higher Education Press for detailed answers.
