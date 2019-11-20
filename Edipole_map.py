@@ -61,9 +61,9 @@ ax1.set_title('E field of a dipole radiation', fontproperties=prop,fontsize=15)
 
 
 ax2 = plt.axes([0.55,0.52,0.4,0.4])
-ax2.imshow(E.real,cmap='jet',vmin=-1,vmax=1)
+ax2.imshow(E.real,cmap='afmhot',vmin=-1,vmax=1)
 ax2.axis('off')
-a = plt.contour(abs(E.real),N,linewidths=1,cmap = 'rainbow')
+a = plt.contour(abs(E.real),N,linewidths=0.3,cmap = 'rainbow')
 plt.clabel(a,fontsize=5)
 ax2.set_title('E field and its contours', fontproperties=prop,fontsize=15)
 

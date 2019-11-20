@@ -46,6 +46,7 @@ ax2 = fig.add_subplot(122)
 fpath = os.path.join(rcParams["datapath"], "fonts/ttf/cmr10.ttf")
 
 prop = fm.FontProperties(fname=fpath)
+
 ax2.imshow(E.real,cmap='jet',vmin=-1/l,vmax=1/l)
 ax2.axis('off')
 # plt.colorbar()
