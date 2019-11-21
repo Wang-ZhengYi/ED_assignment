@@ -6,7 +6,7 @@
 	Electric Dynamic Chapter 5
 
 	@author: ZYW @ BNU
-	'''
+'''
 import numpy as np
 import matplotlib.pyplot as plt
 import os
@@ -37,9 +37,13 @@ N = np.logspace(-0.9,-0.3,3)#contours label numbers
 for i in range(halfp):
 	for j in range(halfp):
 		R[i,j] = abs((i-pixels/2)+(j-pixels/2)*1.0j)
-		L[i] = i
+		L[i] = i-halfp
+
+
 ell = np.linspace(-1*halfp,halfp,pixels)
-E[0:halfp,0:halfp] = P_tt*(np.exp(1.0j*k*R[0:halfp,0:halfp]))*(L[0:halfp]-halfp)/R[0:halfp,0:halfp]**2/perc_2
+
+E[0:halfp,0:halfp] = P_tt*(np.exp(1.0j*k*R[0:halfp,0:halfp]))*L[0:halfp]/R[0:halfp,0:halfp]**2/perc_2
+
 E[0:halfp,halfp:pixels] = -1*E[0:halfp,-1*halfp:-1*pixels:-1]
 E[halfp:pixels,0:halfp] = E[-1*halfp-1:-1*pixels-1:-1,0:halfp]
 E[halfp:pixels,halfp:pixels] = -1*E[-1*halfp-1:-1*pixels-1:-1,-1*halfp-1:-1*pixels-1:-1]
