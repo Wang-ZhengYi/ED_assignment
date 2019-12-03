@@ -20,16 +20,13 @@ fps = 60
 save_path = './videos/saveVideo.mp4'
 img_path='./figures/'
 frames = len(os.listdir(img_path))
-time = frames/fps
-music_start = 0
-
-
+coding = 'mp4v'
 
 img_list=os.listdir(img_path)
 img_list.sort()
 img_list.sort(key = lambda x: int(x[3:-4]))
-fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-image = Image.open('./figures/' + img_list[0])
+fourcc = cv2.VideoWriter_fourcc(*coding)
+image = Image.open(img_path + img_list[0])
 videoWriter = cv2.VideoWriter(save_path,fourcc,fps,image.size)
 print(image.size)
 for i in range(frames):
