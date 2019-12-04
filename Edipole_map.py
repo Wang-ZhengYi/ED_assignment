@@ -11,6 +11,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 from matplotlib import font_manager as fm, rcParams
+from mpl_toolkits.mplot3d import Axes3D
 import easyraid.easyraid as erd#a script call easyraid
 
 ##------------parameters settings-----------------##
@@ -27,10 +28,34 @@ ell = np.linspace(-1*pixels//2,pixels//2,pixels)
 ##---------------computing--------------------##
 
 E = erd.E2E(l=l,P_tt=P_tt,pixels=pixels)
+np.savetxt('E.dat',E)
+
 
 
 
 ##------------data writting & figures making-----------------##
+
+
+
+xx = np.linspace(-pixels//2,pixels//2,pixels)
+yy = np.linspace(-pixels//2,pixels//2,pixels)
+x,y = np.meshgrid(xx,yy)
+
+def draw3D(X,Y,Z,angle):
+    fig = plt.figure()
+    ax1 = fig.add_subplot(111,projection='3d')
+    ax1.view_init(angle[0],angle[1])
+    ax1.plot_surface(X, Y, Z, rstride=1, cstride=1,cmap='rainbow',alpha=0.8)
+    surf = ax1.contourf(X,Y,Z,zdir='z',offset=-5,cmap='rainbow')
+    ax1.set_title(r'$E_z \ hologram$')
+    # plt.tight_layout()
+    plt.savefig('e2_3D.png',dpi=600)
+    plt.show()
+
+draw3D(xx,yy,E,(45,45))
+
+
+
 
 fig= plt.figure()
 fpath = os.path.join(rcParams["datapath"], "fonts/ttf/cmr10.ttf")
