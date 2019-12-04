@@ -8,6 +8,10 @@
 
 2.run [ED_Chapter2_code_plus.py](ED_Chapter2_code_plus.py), which produces a series of full field electric potential distribution maps.
 
+elctric field intensity and potential distribution map:
+
+![avatar](E_and_phi_map.png)
+
 #### Please refer to "Electrodynamics" by China Higher Education Press for detailed answers.
 
 ## Chapter 4
