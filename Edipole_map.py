@@ -15,31 +15,18 @@ import easyraid.easyraid as erd#a script call easyraid
 
 ##------------parameters settings-----------------##
 
-c = 1#speed of light
-eps = 1#vaccum dielectirc number
-pi = np.pi
 l = 100#wave length
-k = 2*pi/l#wave number
 P_tt = 1000#acceleration of electic dipole
 pixels = 1024#resolution of the map
-perc_2 = 4*pi*eps*c**3
 ##------------matrix settings-----------------##
 
-E = np.zeros(shape=(pixels,pixels),dtype='float')#complex electric field intensity
-E_L = np.zeros(pixels,dtype='float')
-B = np.zeros(shape=(pixels,pixels),dtype='float')#complex magnetic field intensity
-R = np.zeros(shape=(pixels,pixels),dtype='float')#radius or the distance from the map centre
-
+# E = np.zeros(shape=(pixels,pixels),dtype='float')#complex electric field intensity
+# B = np.zeros(shape=(pixels,pixels),dtype='float')#complex magnetic field intensity
 N = np.logspace(-0.9,-0.3,3)#contours label numbers
 ell = np.linspace(-1*pixels//2,pixels//2,pixels)
 ##---------------computing--------------------##
 
-E = erd.E2E(c,eps,pixels,l,P_tt)
-
-
-
-
-
+E = erd.E2E(l=l,P_tt=P_tt,pixels=pixels)
 
 
 

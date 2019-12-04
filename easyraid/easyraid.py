@@ -10,31 +10,37 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def E2E(c,eps,pixels,l,P_tt):
-	E = np.zeros(shape=(pixels,pixels),dtype='float')
-	R = np.zeros(shape=(pixels,pixels),dtype='float')
-	c = 1#speed of light
-	eps = 1#vaccum dielectirc number
-	perc_2e = 4*np.pi*eps*c**3
+def E2E(l,P_tt,pixels):
+	E  = np.zeros(shape=(pixels,pixels),dtype='float')
 	xx = np.linspace(-1*pixels//2,pixels//2,pixels)
 	yy = np.linspace(-1*pixels//2,pixels//2,pixels)
 	x,y = np.meshgrid(xx,yy)
 	k = 2*np.pi/l
 	R = abs(x+y*1.0j)
-	E = P_tt*(np.cos(k*R))*x/R**2/perc_2e
+	E = P_tt*(np.cos(k*R))*x/R**2/4/np.pi
 	return E
 
-def E2B(c,eps,pixels,l,P_tt):
+def E2B(l,P_tt,pixels):
 	B = np.zeros(shape=(pixels,pixels),dtype='float')
-	c = 1#speed of light
-	eps = 1#vaccum dielectirc number
-	perc_2b = 4*np.pi*eps*c**2
 	xx = np.linspace(-1*pixels//2,pixels//2,pixels)
 	yy = np.linspace(-1*pixels//2,pixels//2,pixels)
 	x,y = np.meshgrid(xx,yy)
 	k = 2*np.pi/l
 	R = abs(x+y*1.0j)
-	B = P_tt*(np.cos(k*R))*x/R**2/perc_2b
+	B = P_tt*(np.cos(k*R))*x/R**2/4/np.pi
 	return B
 
-# def Atenna(N,theta,l)
+def E4H(Q,l,omega,plots):
+	theta = np.linspace(0.001,2*np.pi,plots)
+	r_0 = 36*Q**2*l**4*omega**6
+	r = r_0*(np.cos(theta)*np.sin(theta))**2
+	return theta,r
+
+def Atenna(N,wavelength,l,plots):
+	k = 2*np.pi/wavelength
+	theta = np.linspace(0.001,2*np.pi,plots)
+	r_0 = (np.cos(np.pi*np.cos(theta)/2)/np.sin(theta))**2
+	r = r_0*(np.sin(N*k*l*np.cos(theta)/2)/np.sin(k*l*np.cos(theta)/2))**2
+	return theta,r
+
+

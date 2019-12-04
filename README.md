@@ -12,14 +12,18 @@
 
 4. run [video_editor.py](video_editor.py), which can edit the video, like adding calling card and BGM, etc..
 
-5. run [mp4togif.py](mp4togif.py),which can convert *.mp4 to *gif.
+5. run [Atenas.py](Atenas.py),which can create the energy flux density distribution in directions for electic quadrupole radiation and atennas array.
 
 #### electric dipole radiation:
 
 ![avatar](dipole_radiation.png)
 
+#### electric quadrupole radiation and Atennas array radiation:
+
+![avatar](e4_raid&_Atennas_array.png)
+
 #### electric dipole radiation sketch video：
 
 ![image](dipole_E_field.gif)
 
-#### Please refer to "Electrodynamics"Page.163-165 by China Higher Education Press for detailed answers.
+#### Please refer to "Electrodynamics"Page.163-165 & 171-175 by China Higher Education Press for detailed answers.
