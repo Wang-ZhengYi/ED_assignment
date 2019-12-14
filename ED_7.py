@@ -3,7 +3,8 @@
 '''
 	Created on Nov. 2019
 	
-	Electric Dynamic Chapter 5
+	Electric Dynamic Chapter 7
+	http://172.16.202.204:801
 
 	@author: ZYW @ BNU
 '''
@@ -16,7 +17,7 @@ pixels = 1024
 c = 10
 l = 75
 k = 2*np.pi/l
-v = 10
+v = 30
 t_1 = 50
 start = 300
 A_0 = 1
@@ -36,7 +37,7 @@ def shock(A_0,l,c,T,pixels):
 	k = 2*np.pi/l
 	omega = k*c
 	r = abs(x-v*T+1.0j*y)
-	A = A_0*np.cos((k*(1+v*x/c/r)*r-omega*(T-r/c)))*x/r/(0.01*r+1)**2
+	A = A_0*np.cos((k*(1+v*x/c/r)*r-omega*(T-r/c)))/(0.01*r+1)**2
 	return A
 
 
